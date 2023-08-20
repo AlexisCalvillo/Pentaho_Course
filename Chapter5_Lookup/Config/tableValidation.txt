@@ -1,0 +1,6 @@
+tableName
+employee
+client
+person
+detail
+parangaricutirimícuaro

@@ -1,0 +1,74 @@
+Query;customer_id;company_name;contact_name;country
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');ANATR;Ana Trujillo Emparedados y helados;Ana Trujillo;Mexico
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');ANTON;Antonio Moreno Taquería;Antonio Moreno;Mexico
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');BERGS;Berglunds snabbköp;Christina Berglund;Sweden
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');BLONP;Blondesddsl père et fils;Frédérique Citeaux;France
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');BOLID;Bólido Comidas preparadas;Martín Sommer;Spain
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');BONAP;Bon app';Laurence Lebihan;France
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');BOTTM;Bottom-Dollar Markets;Elizabeth Lincoln;Canada
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');CACTU;Cactus Comidas para llevar;Patricio Simpson;Argentina
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');CENTC;Centro comercial Moctezuma;Francisco Chang;Mexico
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');CHOPS;Chop-suey Chinese;Yang Wang;Switzerland
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');COMMI;Comércio Mineiro;Pedro Afonso;Brazil
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');DUMON;Du monde entier;Janine Labrune;France
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');ERNSH;Ernst Handel;Roland Mendel;Austria
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');FAMIA;Familia Arquibaldo;Aria Cruz;Brazil
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');FISSA;FISSA Fabrica Inter. Salchichas S.A.;Diego Roel;Spain
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');FOLIG;Folies gourmandes;Martine Rancé;France
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');FOLKO;Folk och fä HB;Maria Larsson;Sweden
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');FRANR;France restauration;Carine Schmitt;France
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');FRANS;Franchi S.p.A.;Paolo Accorti;Italy
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');FURIB;Furia Bacalhau e Frutos do Mar;Lino Rodriguez;Portugal
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');GALED;Galería del gastrónomo;Eduardo Saavedra;Spain
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');GODOS;Godos Cocina Típica;José Pedro Freyre;Spain
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');GOURL;Gourmet Lanchonetes;André Fonseca;Brazil
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');GREAL;Great Lakes Food Market;Howard Snyder;USA
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');GROSR;GROSELLA-Restaurante;Manuel Pereira;Venezuela
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');HANAR;Hanari Carnes;Mario Pontes;Brazil
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');HILAA;HILARION-Abastos;Carlos Hernández;Venezuela
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');HUNGC;Hungry Coyote Import Store;Yoshi Latimer;USA
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');HUNGO;Hungry Owl All-Night Grocers;Patricia McKenna;Ireland
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');LACOR;La corne d'abondance;Daniel Tonini;France
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');LAMAI;La maison d'Asie;Annette Roulet;France
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');LAUGB;Laughing Bacchus Wine Cellars;Yoshi Tannamuri;Canada
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');LAZYK;Lazy K Kountry Store;John Steel;USA
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');LETSS;Let's Stop N Shop;Jaime Yorres;USA
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');LILAS;LILA-Supermercado;Carlos González;Venezuela
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');LINOD;LINO-Delicateses;Felipe Izquierdo;Venezuela
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');LONEP;Lonesome Pine Restaurant;Fran Wilson;USA
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');MAGAA;Magazzini Alimentari Riuniti;Giovanni Rovelli;Italy
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');MAISD;Maison Dewey;Catherine Dewey;Belgium
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');MEREP;Mère Paillarde;Jean Fresnière;Canada
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');OCEAN;Océano Atlántico Ltda.;Yvonne Moncada;Argentina
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');OLDWO;Old World Delicatessen;Rene Phillips;USA
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');PARIS;Paris spécialités;Marie Bertrand;France
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');PERIC;Pericles Comidas clásicas;Guillermo Fernández;Mexico
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');PICCO;Piccolo und mehr;Georg Pipps;Austria
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');PRINI;Princesa Isabel Vinhos;Isabel de Castro;Portugal
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');QUEDE;Que Delícia;Bernardo Batista;Brazil
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');QUEEN;Queen Cozinha;Lúcia Carvalho;Brazil
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');RANCH;Rancho grande;Sergio Gutiérrez;Argentina
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');RATTC;Rattlesnake Canyon Grocery;Paula Wilson;USA
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');REGGC;Reggiani Caseifici;Maurizio Moroni;Italy
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');RICAR;Ricardo Adocicados;Janete Limeira;Brazil
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');RICSU;Richter Supermarkt;Michael Holz;Switzerland
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');ROMEY;Romero y tomillo;Alejandra Camino;Spain
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');SANTG;Santé Gourmet;Jonas Bergulfsen;Norway
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');SAVEA;Save-a-lot Markets;Jose Pavarotti;USA
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');SIMOB;Simons bistro;Jytte Petersen;Denmark
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');SPECD;Spécialités du monde;Dominique Perrier;France
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');SPLIR;Split Rail Beer & Ale;Art Braunschweiger;USA
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');SUPRD;Suprêmes délices;Pascale Cartrain;Belgium
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');THEBI;The Big Cheese;Liz Nixon;USA
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');THECR;The Cracker Box;Liu Wong;USA
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');TORTU;Tortuga Restaurante;Miguel Angel Paolino;Mexico
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');TRADH;Tradição Hipermercados;Anabela Domingues;Brazil
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');TRAIH;Trail's Head Gourmet Provisioners;Helvetius Nagy;USA
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');VAFFE;Vaffeljernet;Palle Ibsen;Denmark
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');VICTE;Victuailles en stock;Mary Saveley;France
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');VINET;Vins et alcools Chevalier;Paul Henriot;France
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');WARTH;Wartian Herkku;Pirkko Koskitalo;Finland
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');WELLI;Wellington Importadora;Paula Parente;Brazil
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');WHITC;White Clover Markets;Karl Jablonski;USA
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');WILMK;Wilman Kala;Matti Karttunen;Finland
+SELECT Customer_id, Company_Name, Contact_Name, Country FROM Customers where country not in ('Germany','UK');WOLZA;Wolski  Zajazd;Zbyszek Piestrzeniewicz;Poland

@@ -1,0 +1,5 @@
+nombreTabla|nombreColumna
+employee|ID
+employee|first_name
+empleado|last_name
+employee|salary
