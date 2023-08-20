@@ -1,11 +1,11 @@
 <transformation>
   <info>
-    <name>SQLScript</name>
+    <name>otherElements</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <directory>/</directory>
+    <directory>/Transformations</directory>
     <parameters>
     </parameters>
     <log>
@@ -426,9 +426,9 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2023/08/16 20:11:09.173</created_date>
+    <created_date>2023/08/19 19:13:24.163</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2023/08/16 20:16:21.909</modified_date>
+    <modified_date>2023/08/19 19:25:50.624</modified_date>
     <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
@@ -486,6 +486,21 @@
     </attributes>
   </connection>
   <order>
+    <hop>
+      <from>Name input</from>
+      <to>Name split</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Abc Input</from>
+      <to>Row flattener</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Abc Input 2</from>
+      <to>Number range</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <step>
     <name>Client</name>
@@ -789,8 +804,8 @@ FROM "public".customers
     </GUI>
   </step>
   <step>
-    <name>Execute SQL script</name>
-    <type>ExecSQL</type>
+    <name>Name input</name>
+    <type>TextFileInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -799,75 +814,118 @@ FROM "public".customers
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>Postgresql</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>--
--- Eliminar la tabla si existe
---
-DROP TABLE IF EXISTS producto;
-
---
--- Tabla: Producto
---
-CREATE TABLE producto(
-productoId integer,
-producto character varying(60),
-cantidad integer,
-precioUnitario real,
-DescuentoPct real
-);
-
-
---
--- Insertar Datos
---
-INSERT INTO producto VALUES(1,'Papa',4,4,0.1);
-INSERT INTO producto VALUES(2,'Palomitas',2,3,0.1);
-INSERT INTO producto VALUES(3,'Frituras de maíz',1,3,0.1);
-INSERT INTO producto VALUES(4,'Cacahuates',2,3,0.1);
-INSERT INTO producto VALUES(5,'Botanas saladas',2,3,0.1);
-INSERT INTO producto VALUES(6,'Barras alimenticias',5,4,0.1);
-INSERT INTO producto VALUES(7,'Nueces y semillas',5,4,0.1);
-INSERT INTO producto VALUES(8,'Caramelos',6,2,0.1);
-INSERT INTO producto VALUES(9,'Dulces enchilados',3,2,0.1);
-INSERT INTO producto VALUES(10,'Chocolate de mesa',2,2,0.1);
-INSERT INTO producto VALUES(11,'Chocolate en polvo',1,2,0.1);
-INSERT INTO producto VALUES(12,'Chocolates',4,4,0.1);
-INSERT INTO producto VALUES(13,'Gomas de mascar',2,3,0.1);
-INSERT INTO producto VALUES(14,'Mazapán',6,2,0.1);
-INSERT INTO producto VALUES(15,'Malvaviscos',5,3,0.1);
-INSERT INTO producto VALUES(16,'Pulpa de tamarindo',4,4,0.1);
-INSERT INTO producto VALUES(17,'Pastillas de dulce',6,4,0.1);
-INSERT INTO producto VALUES(18,'Paletas de dulce',1,4,0.1);
-INSERT INTO producto VALUES(19,'Tortillas de harina/maíz',1,2,0.1);
-INSERT INTO producto VALUES(20,'Galletas dulces',3,3,0.1);
-INSERT INTO producto VALUES(21,'Galletas saladas',1,3,0.1);
-INSERT INTO producto VALUES(22,'Pastelillos',5,4,0.1);
-INSERT INTO producto VALUES(23,'Pan de caja',3,3,0.1);
-INSERT INTO producto VALUES(24,'Pan dulce',3,3,0.1);
-INSERT INTO producto VALUES(25,'Pan molido',5,4,0.1);
-INSERT INTO producto VALUES(26,'Pan tostado',4,2,0.1);
-INSERT INTO producto VALUES(27,'Aguacates',4,3,0.1);
-INSERT INTO producto VALUES(28,'Ajos',2,4,0.1);
-INSERT INTO producto VALUES(29,'Cebollas',1,3,0.1);
-INSERT INTO producto VALUES(30,'Chiles',3,3,0.1);
-INSERT INTO producto VALUES(31,'Cilantro/Perejil',4,2,0.1);
-INSERT INTO producto VALUES(32,'Jitomate',4,4,0.1);
-INSERT INTO producto VALUES(33,'Papas',4,4,0.1);
-INSERT INTO producto VALUES(34,'Limones',2,2,0.1);
-INSERT INTO producto VALUES(35,'Manzanas',1,2,0.1);
-INSERT INTO producto VALUES(36,'Naranjas',5,3,0.1);
-INSERT INTO producto VALUES(37,'Plátanos',2,2,0.1);</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
+    <accept_filenames>N</accept_filenames>
+    <passing_through_fields>N</passing_through_fields>
+    <accept_field/>
+    <accept_stepname/>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_breaks>N</enclosure_breaks>
+    <escapechar/>
+    <header>Y</header>
+    <nr_headerlines>1</nr_headerlines>
+    <footer>N</footer>
+    <nr_footerlines>1</nr_footerlines>
+    <line_wrapped>N</line_wrapped>
+    <nr_wraps>1</nr_wraps>
+    <layout_paged>N</layout_paged>
+    <nr_lines_per_page>80</nr_lines_per_page>
+    <nr_lines_doc_header>0</nr_lines_doc_header>
+    <noempty>Y</noempty>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <rownumByFile>N</rownumByFile>
+    <rownum_field/>
+    <format>DOS</format>
+    <encoding/>
+    <length>Characters</length>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>C:\Users\aalex\Documents\Dev\Pentaho_Course\Chapter4_Transform\Config\Datos2\Nombre.txt</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <type>CSV</type>
+      <compression>None</compression>
+    </file>
+    <filters>
+    </filters>
+    <fields>
+      <field>
+        <name>Nombre</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif>-</nullif>
+        <ifnull/>
+        <position>-1</position>
+        <length>123</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <error_ignored>N</error_ignored>
+    <skip_bad_files>N</skip_bad_files>
+    <file_error_field/>
+    <file_error_message_field/>
+    <error_line_skipped>N</error_line_skipped>
+    <error_count_field/>
+    <error_fields_field/>
+    <error_text_field/>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <date_format_lenient>Y</date_format_lenient>
+    <date_format_locale>en_US</date_format_locale>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Name split</name>
+    <type>SplitFieldToRows3</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <splitfield>Nombre</splitfield>
+    <delimiter>#</delimiter>
+    <newfield>name</newfield>
+    <rownum>N</rownum>
+    <rownum_field/>
+    <resetrownumber>Y</resetrownumber>
+    <delimiter_is_regex>N</delimiter_is_regex>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -878,7 +936,320 @@ INSERT INTO producto VALUES(37,'Plátanos',2,2,0.1);</sql>
     </remotesteps>
     <GUI>
       <xloc>272</xloc>
-      <yloc>176</yloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Row flattener</name>
+    <type>Flattener</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <field_name>ABECEDARIO</field_name>
+    <fields>
+      <field>
+        <name>one</name>
+      </field>
+      <field>
+        <name>two</name>
+      </field>
+      <field>
+        <name>three</name>
+      </field>
+      <field>
+        <name>four</name>
+      </field>
+      <field>
+        <name>five</name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Abc Input</name>
+    <type>TextFileInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <accept_filenames>N</accept_filenames>
+    <passing_through_fields>N</passing_through_fields>
+    <accept_field/>
+    <accept_stepname/>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_breaks>N</enclosure_breaks>
+    <escapechar/>
+    <header>Y</header>
+    <nr_headerlines>1</nr_headerlines>
+    <footer>N</footer>
+    <nr_footerlines>1</nr_footerlines>
+    <line_wrapped>N</line_wrapped>
+    <nr_wraps>1</nr_wraps>
+    <layout_paged>N</layout_paged>
+    <nr_lines_per_page>80</nr_lines_per_page>
+    <nr_lines_doc_header>0</nr_lines_doc_header>
+    <noempty>Y</noempty>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <rownumByFile>N</rownumByFile>
+    <rownum_field/>
+    <format>DOS</format>
+    <encoding/>
+    <length>Characters</length>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>C:\Users\aalex\Documents\Dev\Pentaho_Course\Chapter4_Transform\Config\Datos2\Abecedario.txt</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <type>CSV</type>
+      <compression>None</compression>
+    </file>
+    <filters>
+    </filters>
+    <fields>
+      <field>
+        <name>ABECEDARIO</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif>-</nullif>
+        <ifnull/>
+        <position>-1</position>
+        <length>1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <error_ignored>N</error_ignored>
+    <skip_bad_files>N</skip_bad_files>
+    <file_error_field/>
+    <file_error_message_field/>
+    <error_line_skipped>N</error_line_skipped>
+    <error_count_field/>
+    <error_fields_field/>
+    <error_text_field/>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <date_format_lenient>Y</date_format_lenient>
+    <date_format_locale>en_US</date_format_locale>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Abc Input 2</name>
+    <type>TextFileInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <accept_filenames>N</accept_filenames>
+    <passing_through_fields>N</passing_through_fields>
+    <accept_field/>
+    <accept_stepname/>
+    <separator>|</separator>
+    <enclosure>"</enclosure>
+    <enclosure_breaks>N</enclosure_breaks>
+    <escapechar/>
+    <header>Y</header>
+    <nr_headerlines>1</nr_headerlines>
+    <footer>N</footer>
+    <nr_footerlines>1</nr_footerlines>
+    <line_wrapped>N</line_wrapped>
+    <nr_wraps>1</nr_wraps>
+    <layout_paged>N</layout_paged>
+    <nr_lines_per_page>80</nr_lines_per_page>
+    <nr_lines_doc_header>0</nr_lines_doc_header>
+    <noempty>Y</noempty>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <rownumByFile>N</rownumByFile>
+    <rownum_field/>
+    <format>DOS</format>
+    <encoding/>
+    <length>Characters</length>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>C:\Users\aalex\Documents\Dev\Pentaho_Course\Chapter4_Transform\Config\Datos2\AnioExperiencia.txt</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <type>CSV</type>
+      <compression>None</compression>
+    </file>
+    <filters>
+    </filters>
+    <fields>
+      <field>
+        <name>Nombre</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif>-</nullif>
+        <ifnull/>
+        <position>-1</position>
+        <length>11</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>AnioExperiencia</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>$</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif>-</nullif>
+        <ifnull/>
+        <position>-1</position>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <error_ignored>N</error_ignored>
+    <skip_bad_files>N</skip_bad_files>
+    <file_error_field/>
+    <file_error_message_field/>
+    <error_line_skipped>N</error_line_skipped>
+    <error_count_field/>
+    <error_fields_field/>
+    <error_text_field/>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <date_format_lenient>Y</date_format_lenient>
+    <date_format_locale>en_US</date_format_locale>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Number range</name>
+    <type>NumberRange</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <inputField>AnioExperiencia</inputField>
+    <outputField>position</outputField>
+    <fallBackValue>unknown</fallBackValue>
+    <rules>
+      <rule>
+        <lower_bound>1.0</lower_bound>
+        <upper_bound>6.0</upper_bound>
+        <value>intership</value>
+      </rule>
+      <rule>
+        <lower_bound>6.0</lower_bound>
+        <upper_bound>11.0</upper_bound>
+        <value>semi senior</value>
+      </rule>
+      <rule>
+        <lower_bound>11.0</lower_bound>
+        <upper_bound>16.0</upper_bound>
+        <value>senior</value>
+      </rule>
+    </rules>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>544</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
