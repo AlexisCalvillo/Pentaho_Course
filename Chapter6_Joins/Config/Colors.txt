@@ -1,0 +1,11 @@
+id_color|color
+1|Yellow
+1|Blue
+2|Black
+2|Green
+3|White
+3|Light Blue
+4|Orange
+4|Gray
+5|Purple
+5|Red

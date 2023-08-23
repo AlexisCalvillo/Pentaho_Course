@@ -1,0 +1,6 @@
+SubCategoryProductId|name
+1|MP4&MP3
+2|Headphones
+3|Smartphones
+4|Laptops
+5|Tvs

@@ -11,3 +11,4 @@ Begginer pentaho course. ID:
 * *1.3.0-SNAPSHOT* - Chapter 3: Scripting
 * *1.4.0-SNAPSHOT* - Chapter 4: Transformation elements
 * *1.5.0-SNAPSHOT* - Chapter 5: Lookup elements
+* *1.6.0-SNAPSHOT* - Chapter 5: Join elements
