@@ -12,4 +12,5 @@ Begginer pentaho course. ID:
 * *1.4.0-SNAPSHOT* - Chapter 4: Transformation elements
 * *1.5.0-SNAPSHOT* - Chapter 5: Lookup elements
 * *1.6.0-SNAPSHOT* - Chapter 6: Join elements
-* *1.6.0-SNAPSHOT* - Chapter 7: Utility elements
+* *1.7.0-SNAPSHOT* - Chapter 7: Utility elements
+* *1.8.0-SNAPSHOT* - Chapter 8: Statistics elements
